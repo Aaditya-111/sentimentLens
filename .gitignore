@@ -1,0 +1,10 @@
+node_modules/
+__pycache__/
+*.pyc
+.env
+frontend/dist/
+distilbert_amazon.zip
+.vscode/
+.DS_Store
+Thumbs.db
+*.joblib
