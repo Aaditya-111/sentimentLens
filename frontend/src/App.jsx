@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 
-const API_BASE = "http://localhost:8000";
+const API_BASE = "/api";
 
 const EXAMPLES = [
   { label: "Positive", emoji: "⭐", text: "This product completely exceeded my expectations. The build quality is outstanding and it arrived two days early!" },
