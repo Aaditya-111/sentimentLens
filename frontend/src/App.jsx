@@ -65,7 +65,7 @@ function ModelCard({ title, subtitle, badge, badgeColor, result, loading, accent
       {loading ? (
         <div className="fade-in" style={{ display: "flex", gap: 12, alignItems: "center", color: "rgba(255,255,255,0.5)", fontSize: 13, height: 90, fontFamily: "monospace" }}>
           <div style={{ width: 16, height: 16, border: `2px solid ${accent}30`, borderTop: `2px solid ${accent}`, borderRadius: "50%", animation: "spin 0.8s linear infinite" }} />
-          > processing_tensors...
+          {"> processing_tensors..."}
         </div>
       ) : result ? (
         <div className="fade-up">
@@ -91,7 +91,7 @@ function ModelCard({ title, subtitle, badge, badgeColor, result, loading, accent
         </div>
       ) : (
         <div style={{ height: 90, display: "flex", alignItems: "center", color: "rgba(255,255,255,0.3)", fontSize: 13, fontFamily: "monospace" }}>
-          > awaiting_input...
+          {"> awaiting_input..."}
         </div>
       )}
     </div>
@@ -331,8 +331,8 @@ export default function App() {
           <div className="fade-in" style={{ background: "rgba(220, 38, 38, 0.1)", border: "1px solid rgba(220, 38, 38, 0.3)", borderRadius: 16, padding: "16px 24px", marginBottom: 32, fontSize: 14, color: "#FCA5A5", display: "flex", alignItems: "center", gap: 16, backdropFilter: "blur(10px)" }}>
             <span style={{ fontSize: 24, filter: "drop-shadow(0 0 10px rgba(220,38,38,0.5))" }}>⚠️</span>
             <div>
-              <div style={{ fontWeight: 700, marginBottom: 4, letterSpacing: 1 }}>CONNECTION_REFUSED</div>
-              <div style={{ opacity: 0.8, fontSize: 13, fontFamily: "monospace" }}>> ensure FastAPI backend is running on :8000</div>
+              <div style={{ fontWeight: 700, marginBottom: 4, letterSpacing: 1 }}>SYSTEM_ERROR</div>
+              <div style={{ opacity: 0.8, fontSize: 13, fontFamily: "monospace" }}>{error}</div>
             </div>
           </div>
         )}
